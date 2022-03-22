@@ -1,12 +1,14 @@
-import React from "react"
+import React, {useState} from 'react'
 import Navbar from "../../Components/Navbar/Navbar"
-import Dashboard from "../../Components/Dashboard/Dashboard"
+import Dashboard from "../../Components/Event/Dashboard/Dashboard"
 
 export default function App() {
+  const [formOpen, setFormOpen] = useState(false);
+
   return (
-    <div>
-      <Navbar />
-      <Dashboard />
-    </div>
+    <>
+      <Navbar setFormOpen={setFormOpen}/>
+      <Dashboard formOpen={formOpen} setFormOpen={setFormOpen}/>
+    </>
   )
 }
