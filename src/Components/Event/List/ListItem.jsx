@@ -2,7 +2,7 @@ import React from "react";
 import ListAtendee from "./ListAtendee";
 
 
-export default function ListItem({event}) {
+export default function ListItem({ event, selectEvent, deleteEvent }) {
   return (
     <div className="bg-white rounded-lg border border-gray-200 shadow-md mb-6">
       <div className="container">
@@ -36,17 +36,28 @@ export default function ListItem({event}) {
 
         <div className="flex bg-gray-100 pl-3">
           {event.attendees.map(attendee => (
-            <ListAtendee key={attendee.id} attendee={attendee}/>
+            <ListAtendee key={attendee.id} attendee={attendee} />
           ))}
         </div>
 
         <hr></hr>
 
         <div className="flex justify-between my-3">
-            <span className="ml-3">{event.description}</span>
-            <button className="mr-3 mt-20 sm:min-w-[120px] text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View</button>
+          <span className="ml-3">{event.description}</span>
+          <div className="flex">
+            <button
+              onClick={() => selectEvent(event)}
+              className="mr-3 mt-20 sm:min-w-[85px] text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              View</button>
+            <button
+              onClick={() => deleteEvent(event.id)}
+              className="mr-3 mt-20 sm:min-w-[85px] text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              Delete</button>
+          </div>
         </div>
-      
+
       </div>
     </div>
   )
