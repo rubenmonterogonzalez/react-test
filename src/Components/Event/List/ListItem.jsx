@@ -4,8 +4,8 @@ import ListAtendee from "./ListAtendee";
 
 export default function ListItem({ event, selectEvent, deleteEvent }) {
   return (
-    <div className="bg-white rounded-lg border border-gray-200 shadow-md mb-6">
-      <div className="container">
+    <div className="bg-white rounded-lg border border-gray-200 shadow-md mb-6 max-w-[1000px]">
+      <div className="">
 
         <div className="flex">
           <img className="m-3 w-16 h-16 rounded-full shadow-lg" src={event.hostPhotoURL} />

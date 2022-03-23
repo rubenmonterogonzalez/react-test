@@ -32,7 +32,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
   }
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 shadow-md mb-6">
+    <div className="bg-white rounded-lg border border-gray-200 shadow-md mb-6 mt-12 m-auto max-w-[300px] sm:max-w-[600px]">
       <div className="container">
         <form onSubmit={handleFormSubmit}>
           <h6 className="mx-3 my-2 text-xl font-medium text-gray-900">{selectedEvent ? 'Edit the event' : 'Create new event'}</h6>
