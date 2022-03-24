@@ -1,5 +1,6 @@
 import React from "react";
 import ListAtendee from "./ListAtendee";
+import { Link } from "react-router-dom";
 
 
 export default function ListItem({ event, selectEvent, deleteEvent }) {
@@ -45,11 +46,11 @@ export default function ListItem({ event, selectEvent, deleteEvent }) {
         <div className="flex justify-between my-3">
           <span className="ml-3">{event.description}</span>
           <div className="flex">
-            <button
-              onClick={() => selectEvent(event)}
+            <Link
+              to={`/events/${event.id}`}
               className="mr-3 mt-20 sm:min-w-[85px] text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
-              View</button>
+              View</Link>
             <button
               onClick={() => deleteEvent(event.id)}
               className="mr-3 mt-20 sm:min-w-[85px] text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
