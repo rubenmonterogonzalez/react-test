@@ -11,7 +11,7 @@ export default function SignedInMenu({signOut}) {
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="flex sm:min-w-[120px] text-white md:bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-[0.525rem] text-center">
-            <img className="m-auto mr-1 w-6 h-6 rounded-full shadow-lg" src={icon} />
+            <img className="m-auto mr-1 w-6 h-6 rounded-full shadow-lg" src={icon} alt=""/>
             <span className='m-auto'>John</span>
             <ChevronDownIcon className="-mr-1 ml-2 mt-[0.20rem] h-5 w-5" aria-hidden="true" />
           </Menu.Button>

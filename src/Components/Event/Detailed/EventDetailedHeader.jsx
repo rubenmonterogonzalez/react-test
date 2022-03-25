@@ -7,7 +7,7 @@ export default function EventDetailedHeader() {
     <>
       <div className='flex flex-col p-4 w-full'>
         <div className="relative">
-          <img className="object-cover rounded-tl-md rounded-tr-md w-full h-[400px] brightness-70" src={drinks} />
+          <img className="object-cover rounded-tl-md rounded-tr-md w-full h-[400px] brightness-70" alt="" src={drinks} />
           <div className='absolute top-[280px] left-[25px]'>
             <h1 className='text-white text-[26px] font-semibold'>Event Title</h1>
             <p className='text-white'>Event Date</p>

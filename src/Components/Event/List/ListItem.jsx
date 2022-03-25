@@ -9,7 +9,7 @@ export default function ListItem({ event, selectEvent, deleteEvent }) {
       <div className="">
 
         <div className="flex">
-          <img className="m-3 w-16 h-16 rounded-full shadow-lg" src={event.hostPhotoURL} />
+          <img className="m-3 w-16 h-16 rounded-full shadow-lg" src={event.hostPhotoURL} alt="" />
           <div className="flex flex-col justify-center">
             <h5 className="mb-1 text-xl font-medium text-gray-900">{event.title}</h5>
             <span className="text-sm text-gray-500">{event.hostedBy}</span>
