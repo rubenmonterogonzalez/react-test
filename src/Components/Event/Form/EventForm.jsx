@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import cuid from 'cuid';
+import { Link } from "react-router-dom";
 
 export default function EventForm({ setFormOpen, setEvents, createEvent, selectedEvent, updateEvent }) {
   const initialValues = selectedEvent ?? {
@@ -103,7 +104,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
           </div>
 
           <div className="flex justify-end mb-3">
-            <button onClick={() => setFormOpen(false)} type="submit" className="mr-3 mt-3 text-white bg-gradient-to-r from-black to-gray-300 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Cancel</button>
+            <Link to={'/events'} type="submit" className="mr-3 mt-3 text-white bg-gradient-to-r from-black to-gray-300 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Cancel</Link>
             <button type="submit" className="mr-3 mt-3 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
           </div>
         </form>

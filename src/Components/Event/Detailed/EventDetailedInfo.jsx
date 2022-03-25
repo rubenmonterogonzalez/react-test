@@ -4,7 +4,7 @@ export default function EventDetailedInfo() {
   return (
     <div className='p-4'>
       <div className='flex border-[1px] border-b-transparent border-gray-200 h-[50px] items-center rounded-tl-md rounded-tr-md'>
-        <svg xmlns="http://www.w3.org/2000/svg" class="m-4 icon icon-tabler icon-tabler-info-square" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="teal" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" className="m-4 icon icon-tabler icon-tabler-info-square" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="teal" fill="none" strokeLinecap="round" strokeLinejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <line x1="12" y1="8" x2="12.01" y2="8"></line>
           <rect x="4" y="4" width="16" height="16" rx="2"></rect>
@@ -13,7 +13,7 @@ export default function EventDetailedInfo() {
         <span>Event Description</span>
       </div>
       <div className='flex border-[1px] border-b-transparent border-gray-200 h-[50px] items-center'>
-        <svg xmlns="http://www.w3.org/2000/svg" class="m-4 icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="teal" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" className="m-4 icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="teal" fill="none" strokeLinecap="round" strokeLinejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <rect x="4" y="5" width="16" height="16" rx="2"></rect>
           <line x1="16" y1="3" x2="16" y2="7"></line>
@@ -25,7 +25,7 @@ export default function EventDetailedInfo() {
       </div>
       <div className='flex shadow-md border-[1px] border-gray-200 h-[50px] items-center justify-between rounded-bl-md rounded-br-md'>
         <div className='flex items-center'>
-        <svg xmlns="http://www.w3.org/2000/svg" class="m-4 icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="teal" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" className="m-4 icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="teal" fill="none" strokeLinecap="round" strokeLinejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <circle cx="12" cy="11" r="3"></circle>
           <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>

@@ -10,11 +10,6 @@ export default function App() {
   const [formOpen, setFormOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  function handleSelectEvent(event) {
-    setSelectedEvent(event);
-    setFormOpen(true);
-  }
-
   function handleCreateFormOpen() {
     setSelectedEvent(null);
     setFormOpen(true);
@@ -30,7 +25,14 @@ export default function App() {
       <Routes>
         <Route path='/events' element={<Dashboard />} />
         <Route path='/events/:id' element={<EventDetailedPage />} />
-        <Route path='/createEvent' element={<EventForm />} />
+        {["/createEvent", "/manage/:id"].map(path => (
+          <Route
+            key="createEvent" // optional: avoid full re-renders on route changes
+            path={path}
+            element={<EventForm />}
+          />
+        ))}
+        {/* <Route path='/createEvent' element={<EventForm />} /> */}
       </Routes>
     </>
   )
