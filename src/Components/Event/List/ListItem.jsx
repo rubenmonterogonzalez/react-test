@@ -1,9 +1,13 @@
 import React from "react";
 import ListAtendee from "./ListAtendee";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { deleteEvent } from "../eventAction";
 
 
-export default function ListItem({ event, selectEvent, deleteEvent }) {
+export default function ListItem({ event }) {
+  const dispatch = useDispatch();
+
   return (
     <div className="bg-white rounded-lg border border-gray-200 shadow-md mb-6 max-w-[1000px]">
       <div className="">
@@ -36,7 +40,7 @@ export default function ListItem({ event, selectEvent, deleteEvent }) {
         <hr></hr>
 
         <div className="flex bg-gray-100 pl-3">
-          {event.attendees.map(attendee => (
+          {event.attendees.map((attendee) => (
             <ListAtendee key={attendee.id} attendee={attendee} />
           ))}
         </div>
@@ -52,7 +56,7 @@ export default function ListItem({ event, selectEvent, deleteEvent }) {
             >
               View</Link>
             <button
-              onClick={() => deleteEvent(event.id)}
+              onClick={() => dispatch(deleteEvent(event.id))}
               className="mr-3 mt-20 sm:min-w-[85px] text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
               Delete</button>

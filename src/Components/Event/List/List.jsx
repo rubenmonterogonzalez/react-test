@@ -1,15 +1,13 @@
 import React from "react";
 import ListItem from "../List/ListItem";
 
-export default function List({ events, selectEvent, deleteEvent }) {
+export default function List({ events }) {
   return (
     <>
-      {events.map(event => (
+      {events.map((event) => (
         <ListItem
           event={event}
           key={event.id}
-          selectEvent={selectEvent}
-          deleteEvent={deleteEvent}
         />
       ))}
     </>

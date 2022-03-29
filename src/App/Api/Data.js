@@ -1,4 +1,4 @@
-export const sampleData = [{
+export const Data = [{
   id: '1',
   title: 'Trip to Empire State building',
   date: '2018-03-21',
@@ -10,12 +10,12 @@ export const sampleData = [{
   hostPhotoURL: 'https://randomuser.me/api/portraits/men/20.jpg',
   attendees: [{
     id: 'a',
-    name: 'Bob',
+    displayName: 'Bob',
     photoURL: 'https://randomuser.me/api/portraits/men/20.jpg'
   },
   {
     id: 'b',
-    name: 'Tom',
+    displayName: 'Tom',
     photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
   }
   ]
@@ -33,12 +33,12 @@ export const sampleData = [{
   attendees: [
     {
       id: 'a',
-      name: 'Bob',
+      displayName: 'Bob',
       photoURL: 'https://randomuser.me/api/portraits/men/20.jpg'
     },
     {
       id: 'b',
-      name: 'Tom',
+      displayName: 'Tom',
       photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
     }
   ]
