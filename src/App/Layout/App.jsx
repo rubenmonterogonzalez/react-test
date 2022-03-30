@@ -6,12 +6,14 @@ import Dashboard from '../../Components/Event/Dashboard/Dashboard';
 import EventDetailedPage from '../../Components/Event/Detailed/EventDetailedPage';
 import EventForm from '../../Components/Event/Form/EventForm';
 import Sandbox from '../../Components/Sandbox/Sandbox';
+import ModalManager from '../Common/Modals/ModalManager';
 
 export default function App() {
   const { key } = useLocation();
   
   return (
     <>
+      <ModalManager />
       <Routes>
         <Route path='/' element={<HomePage />} />
       </Routes>

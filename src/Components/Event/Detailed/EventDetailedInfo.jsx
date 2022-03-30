@@ -1,4 +1,6 @@
 import React from 'react'
+import { format } from 'date-fns';
+
 
 export default function EventDetailedInfo({event}) {
   return (
@@ -21,7 +23,7 @@ export default function EventDetailedInfo({event}) {
           <line x1="4" y1="11" x2="20" y2="11"></line>
           <rect x="8" y="15" width="2" height="2"></rect>
         </svg>
-        <span>{event.date}</span>
+        <span>{format(event.date, 'MMMM d, yyyy h:mm a')}</span>
       </div>
       <div className='flex shadow-md border-[1px] border-gray-200 h-[80px] items-center justify-between rounded-bl-md rounded-br-md'>
         <div className='flex items-center'>

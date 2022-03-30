@@ -3,6 +3,7 @@ import ListAtendee from "./ListAtendee";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteEvent } from "../eventAction";
+import { format } from 'date-fns';
 
 
 export default function ListItem({ event }) {
@@ -28,7 +29,7 @@ export default function ListItem({ event }) {
             <circle cx="12" cy="12" r="9"></circle>
             <polyline points="12 7 12 12 15 15"></polyline>
           </svg>
-          <span className="my-3">{event.date}</span>
+          <span className="my-3">{format(event.date, 'MMMM d, yyyy h:mm a')}</span>
           <svg xmlns="http://www.w3.org/2000/svg" className="my-3 ml-3 mr-2 icon icon-tabler icon-tabler-map-pin" width="20" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="#343434" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <circle cx="12" cy="11" r="3"></circle>

@@ -56,7 +56,7 @@ export default function EventForm() {
             navigate('/events')
           }}
         >
-          {({ values, handleChange, handleSubmit }) => (
+          {({ isSubmitting, dirty, isValid }) => (
             <Form className="px-3 ui form">
               <h6 className="mt-3 font-medium text-[#0891b2]">EVENT DETAILS</h6>
               <MyTextInput name="title" placeholder="Event Title" />
@@ -76,8 +76,19 @@ export default function EventForm() {
                 />
 
               <div className="flex justify-end mb-3">
-                <Link to={'/events'} type="submit" className="mr-3 mt-3 text-white bg-gradient-to-r from-black to-gray-300 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Cancel</Link>
-                <button type="submit" className="mr-3 mt-3 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
+                <Link 
+                  disabled={isSubmitting}
+                  to={'/events'} 
+                  type="submit" 
+                  className="mr-3 mt-3 text-white bg-gradient-to-r from-black to-gray-300 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                >Cancel</Link>
+                
+                <button 
+                  loading={isSubmitting || null} 
+                  disabled={!isValid || !dirty || isSubmitting}
+                  type="submit" 
+                  className="disabled:opacity-20 disabled:hover:text-white mr-3 mt-3 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br hover:text-gray-800 focus:text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                >Submit</button>
               </div>
             </Form>
           )}

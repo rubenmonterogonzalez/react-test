@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import drinks from '../../../Assets/images/drinks.jpeg'
+import { format } from 'date-fns';
+
 
 export default function EventDetailedHeader({event}) {
   return (
@@ -10,7 +12,7 @@ export default function EventDetailedHeader({event}) {
           <img className="object-cover rounded-tl-md rounded-tr-md w-full h-[400px] brightness-70" alt="" src={drinks} />
           <div className='absolute top-[280px] left-[25px]'>
             <h1 className='text-white text-[26px] font-semibold'>{event.title}</h1>
-            <p className='text-white'>{event.date}</p>
+            <p className='text-white'>{format(event.date, 'MMMM d, yyyy h:mm a')}</p>
             <p className='text-white'>Hosted by <strong>{event.hostedBy}</strong></p>
           </div>
           <div className='flex justify-between py-4 px-4 border-1 border-gray-200 shadow-md rounded-bl-md rounded-br-md'>
