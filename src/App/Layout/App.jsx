@@ -9,6 +9,7 @@ import Sandbox from '../../Components/Sandbox/Sandbox';
 
 export default function App() {
   const { key } = useLocation();
+  
   return (
     <>
       <Routes>
